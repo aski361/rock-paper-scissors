@@ -26,16 +26,28 @@
             }
         }
 
-        console.log(getComputerChoice())
 
-        const playerSelection = rock;
+        const playerSelection = 'paper';
         const computerSelection = getComputerChoice;
 
         function playRound(playerSelection,computerSelection) {
-            if (playerSelection == rock  && computerSelection == rock) {
-
+            if (playerSelection === rock && computerSelection === rock || playerSelection === paper && computerSelection === paper 
+            || playerSelection === scissors && computerSelection === scissors) {
+                return `Mamy remis! Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
+            } else {
+                if(playerSelection === rock && computerSelection === scissors) {
+                    return `Player wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
+                } else if (playerSelection === paper && computerSelection === rock) {
+                    return `Player wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
+                } else if (playerSelection === scissors && computerSelection === paper) {
+                    return `Player wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
+                } else {
+                    return `Computer wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
+                }
             }
         }
+
+        console.log(playRound(playerSelection,computerSelection()))
 
 
 
