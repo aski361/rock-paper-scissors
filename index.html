@@ -9,8 +9,6 @@
 <body>
     <script>
 
-        console.log('Hello!');
-
         const rock = 'rock';
         const paper = 'paper';
         const scissors = 'scissors'
@@ -25,7 +23,6 @@
                 return scissors;
             }
         }
-
 
         const playerSelection = 'paper';
         const computerSelection = getComputerChoice;
@@ -47,7 +44,56 @@
             }
         }
 
-        console.log(playRound(playerSelection,computerSelection()))
+
+        let game1 = playRound(prompt('Runda 1'), computerSelection());
+        let game2 = playRound(prompt('Runda 2'),computerSelection());
+        let game3 = playRound(prompt('Runda 3'),computerSelection());
+        let game4 = playRound(prompt('Runda 4'),computerSelection());
+        let game5 = playRound(prompt('Runda 5'),computerSelection());
+        console.log(game1);
+        console.log(game2);
+        console.log(game3);
+        console.log(game4);
+        console.log(game5);
+
+        
+        function game() {
+            let playerResult = 0;
+            let computerResult = 0;
+            if(game1[0] === 'P') {
+                playerResult++;
+            } else if (game1[0] ==='C') {
+                computerResult++;
+            }
+            if(game2[0] === 'P') {
+                playerResult++;
+            } else if(game2[0] === 'C') {
+                computerResult++;
+            }
+            if(game3[0] === 'P') {
+                playerResult++;
+            } else if( game3[0] === 'C') {
+                computerResult++;
+            }
+            if(game4[0] === 'P') {
+                playerResult++;
+            } else if( game4[0] === 'C') {
+                computerResult++;
+            }
+            if(game5[0] === 'P') {
+                playerResult++;
+            } else if( game5[0] ==='C') {
+                computerResult++;
+            }
+            return `Wynik gracza: ${playerResult} | Wynik komputera ${computerResult}`
+        }
+
+        console.log(game())
+
+
+        
+
+
 
 
 
