@@ -9,7 +9,24 @@
 <body>
     <script>
 
-        
+        console.log('Hello!');
+
+        const rock = 'rock';
+        const paper = 'paper';
+        const scissors = 'scissors'
+
+        function getComputerChoice() {
+            let result = Math.ceil(Math.random()* 3);
+            if(result == 1) {
+                return rock;
+            } else if (result == 2) {
+                return paper;
+            } else {
+                return scissors;
+            }
+        }
+
+        console.log(getComputerChoice())
 
     </script>
 </body>
