@@ -1,0 +1,36 @@
+.top {
+    font-size: 64px;
+    text-align: center;
+    margin: 20px 0;
+}
+
+.weapon {
+    text-align: center;
+}
+
+#rock,#paper,#scissors {
+    font-size: 128px;
+    border: 2px solid pink;
+    border-radius: 8px;
+}
+
+.emoji {
+    margin: 32px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    gap: 16px;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result {
+    width: 100%;
+    text-align: center;
+}

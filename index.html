@@ -5,100 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-
-        const rock = 'rock';
-        const paper = 'paper';
-        const scissors = 'scissors'
-
-        function getComputerChoice() {
-            let result = Math.ceil(Math.random()* 3);
-            if(result == 1) {
-                return rock;
-            } else if (result == 2) {
-                return paper;
-            } else {
-                return scissors;
-            }
-        }
-
-        const playerSelection = 'paper';
-        const computerSelection = getComputerChoice;
-
-        function playRound(playerSelection,computerSelection) {
-            if (playerSelection === rock && computerSelection === rock || playerSelection === paper && computerSelection === paper 
-            || playerSelection === scissors && computerSelection === scissors) {
-                return `Mamy remis! Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
-            } else {
-                if(playerSelection === rock && computerSelection === scissors) {
-                    return `Player wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
-                } else if (playerSelection === paper && computerSelection === rock) {
-                    return `Player wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
-                } else if (playerSelection === scissors && computerSelection === paper) {
-                    return `Player wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
-                } else {
-                    return `Computer wins round | Komputer wybral ${computerSelection} Player wybral ${playerSelection}`;
-                }
-            }
-        }
-
-
-        let game1 = playRound(prompt('Runda 1'), computerSelection());
-        let game2 = playRound(prompt('Runda 2'),computerSelection());
-        let game3 = playRound(prompt('Runda 3'),computerSelection());
-        let game4 = playRound(prompt('Runda 4'),computerSelection());
-        let game5 = playRound(prompt('Runda 5'),computerSelection());
-        console.log(game1);
-        console.log(game2);
-        console.log(game3);
-        console.log(game4);
-        console.log(game5);
-
-        
-        function game() {
-            let playerResult = 0;
-            let computerResult = 0;
-            if(game1[0] === 'P') {
-                playerResult++;
-            } else if (game1[0] ==='C') {
-                computerResult++;
-            }
-            if(game2[0] === 'P') {
-                playerResult++;
-            } else if(game2[0] === 'C') {
-                computerResult++;
-            }
-            if(game3[0] === 'P') {
-                playerResult++;
-            } else if( game3[0] === 'C') {
-                computerResult++;
-            }
-            if(game4[0] === 'P') {
-                playerResult++;
-            } else if( game4[0] === 'C') {
-                computerResult++;
-            }
-            if(game5[0] === 'P') {
-                playerResult++;
-            } else if( game5[0] ==='C') {
-                computerResult++;
-            }
-            return `Wynik gracza: ${playerResult} | Wynik komputera ${computerResult}`
-        }
-
-        console.log(game())
-
-
-        
 
 
 
+<div class="top">ROCK PAPER SCISSORS GAME</div>
+
+<div class="weapon">
+    <h1>Choose your weapon</h1>
+    <h2>First to score 5 points win the game</h2>
+    
+</div>
+
+<div class="emoji" id="delete">
+    <div class="rock"><button id="rock">🪨</button></div>
+    <div class="paper"><button id="paper">✋</button></div>
+    <div class="scissors"><button id="scissors">✂️</button></div>
+</div>
+
+<div class="result">
+</div>
 
 
-
-
-    </script>
+    
+    
+    
+<script src="script.js"></script>
 </body>
 </html>
