@@ -1,3 +1,3 @@
-# rock-paper-scissors
-
-create a game rock-paper-scissors
+# Rock-Paper-Scissors
+Game! <br>
+Live preview: https://aski361.github.io/rock-paper-scissors/
